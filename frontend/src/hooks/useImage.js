@@ -4,11 +4,15 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const useImage = (id, type) => {
   const [ID, setID] = useState(id ?? 0);
-  const { data, error } = useSWR(`http://10.101.0.19:6789/api/continue/${ID}/${type}`, fetcher, {
-    revalidateOnFocus: false,
-    revalidateOnReconnect: false,
-    revalidateIfStale: false,
-  });
+  const { data, error } = useSWR(
+    `http://spacedle-env.eba-mcyhkitc.sa-east-1.elasticbeanstalk.com:6789/api/continue/${ID}/${type}`,
+    fetcher,
+    {
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
+      revalidateIfStale: false,
+    }
+  );
 
   useEffect(() => {
     setID(Math.min(id ?? 0, 4));
