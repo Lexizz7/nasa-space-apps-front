@@ -1,0 +1,12 @@
+.logo {
+  height: 3rem;
+  overflow: hidden;
+  position: relative;
+}
+.logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  position: relative;
+  top: 5%;
+}

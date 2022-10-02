@@ -1,0 +1,7 @@
+.container {
+  background-color: rgb(var(--background-color-dark));
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 8px;
+}
